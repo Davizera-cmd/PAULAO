@@ -1,103 +1,193 @@
+/* Aqui é corpo da página*/
 body {
-background-repeat: no-repeat;
-background-size:auto;
-height: auto;
-background-color: rgb(5, 19, 36);
-margin: 0;
-padding: 0;
-font-family: arial, sans-serif;
+background-repeat: no-repeat; /*faz com que o background da página não se repita*/
+background-size:auto; /*faz com que o background da página tenha o tamanho original*/
+height: auto; /*faz com que a altura da página seja automática*/
+background-color: rgb(5, 19, 36); /*faz o background da página ser azul escuro*/
+margin: 0; /*faz com que a margem da página seja 0*/
+padding: 0; /*faz com que o padding da página seja 0*/
+font-family: arial, sans-serif; /*faz com que a fonte do texto da página seja arial ou sans-serif*/
 }
 
+/* Aqui é o Cabeçalho da página*/
 header {
-background-color: rgb(0, 0, 0);
-height: 70px;;
-display: flex;
-align-items: center;
-overflow: visible;
-width: 100%;
-padding: 0 20px;
-box-sizing: border-box;
+background-color: rgb(0, 0, 0); /*faz o background do header ser preto*/
+height: 70px;; /*faz com que o header tenha 70px de altura*/
+display: flex; /*faz com que os itens do header fiquem em linha*/
+align-items: center; /*faz com que os itens do header fiquem centralizados verticalmente*/
+width: 100%; /*faz com que o header ocupe toda a largura da página*/
+padding: 0 20px; /*faz com que o padding do header seja 0 em cima e embaixo e 20px nas laterais*/
+box-sizing: border-box; /*faz com que o padding não aumente o tamanho do header*/
 }
 
+/* Aqui é o Conteúdo do cabeçalho em imagem*/
 header img {
-    height: 4.5rem;
-    margin: 0;
-    padding: 0;
+    height: 4.5rem; /*faz com que a imagem do header tenha 4.5rem de altura*/
+    margin: 0; /*faz com que a margem da imagem do header seja 0*/
+    padding: 0;  /*faz com que o padding da imagem do header seja 0*/
 }
 
+/* Aqui é o cabeçalho em texto*/
 header a {
-    color: white;
-    text-decoration: none;
-    margin: 20px;
+    color: white; /*faz com que o texto do header seja branco*/
+    text-decoration: none; /*faz com que o texto do header não tenha decoração*/
+    margin: 20px; /*faz com que o texto do header tenha 20px de margem*/
 }
 
 .menu2 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    margin-right: 60px;
+    display: flex; /*faz com que os itens do menu2 fiquem em linha*/
+    justify-content: flex-end; /*faz com que os itens do menu2 fiquem alinhados à direita*/
+    align-items: center; /*faz com que os itens do menu2 fiquem centralizados verticalmente*/
+    width: 100%; /*faz com que o menu2 ocupe toda a largura da página*/
+    margin-right: 60px; /*faz com que o menu2 tenha 60px de margem à direita*/
 }
 
 .contato {
-    margin: 15px;
+    margin: 15px; /*faz com que o contato tenha 15px de margem*/
 }
 
 .contato-link {
-    color: white;
-    cursor: pointer;
+    color: white; /*faz com que o texto do contato seja branco*/
+    cursor: pointer; /*faz com que o cursor do contato seja um ponteiro*/
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* faz com que os itens do header fiquem em coluna */
+        height: auto; /* ajusta a altura do header automaticamente */
+        padding: 10px; /* ajusta o padding do header */
+    }
+
+    .menu2 {
+        flex-direction: column; /* faz com que os itens do menu2 fiquem em coluna */
+        align-items: center; /* centraliza os itens do menu2 */
+        margin-right: 0; /* remove a margem à direita */
+    }
+
+    header a {
+        margin: 10px 0; /* ajusta a margem dos textos do header */
+    }
 }
 
 .popup {
-    display: none;
-    background-color: white;
-    color: black;
-    padding: 15px;
-    border: 1px solid #ccc;
-    z-index: 1;
-    right: 0;
-    white-space: nowrap;
-    transition: opacity 0.3s ease-in-out;
+    display: none; /*faz com que o popup não seja exibido*/
+    background-color: white; /*faz com que o background do popup seja branco*/
+    color: black; /*faz com que o texto do popup seja preto*/
+    padding: 15px; /*faz com que o padding do popup seja 15px*/
+    border: 1px solid #ccc; /*faz com que o popup tenha uma borda de 1px sólida cinza*/
+    z-index: 1; /*faz com que o popup fique acima de todos os outros elementos*/
+    right: 0; /*faz com que o popup fique à direita*/
+    white-space: nowrap; /*faz com que o texto do popup não quebre a linha*/
 }
 
 .popup a {
-    display: block;
-    color: black;
-    text-decoration: none;
-    margin: 5px 0;
+    display: block; /*faz com que o link do popup seja exibido em bloco*/
+    color: black; /*faz com que o texto do link do popup seja preto*/
+    text-decoration: none; /*faz com que o link do popup não tenha decoração*/
+    margin: 5px 0; /*faz com que o link do popup tenha 5px de margem em cima e embaixo*/
 }
 
 .popup a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /*faz com que o link do popup tenha uma decoração de sublinhado ao passar o mouse*/
 }
 
 .gallery-container {
-    display: flex;
-    justify-content: center; 
-    gap: 10px; 
+    display: flex; /*faz com que os itens da galeria fiquem em linha*/
+    justify-content: center; /*faz com que os itens da galeria fiquem centralizados horizontalmente*/
+    gap: 10px; /*faz com que os itens da galeria tenham 10px de espaço entre eles*/
 }
 .gallery-image {
-    max-width: 350px; 
-    height: 200px;
+    max-width: 350px; /*faz com que a imagem da galeria tenha no máximo 350px de largura*/
+    height: 200px; /*faz com que a imagem da galeria tenha 200px de altura*/
 }
 h2 {
+    text-align: right; /*faz com que o título h2 fique centralizado*/
+    color: rgb(255, 255, 255); /*faz com que o texto do título h2 seja branco*/
+    font-family: 'Creepster', sans-serif; /* Fonte gótica rabuda-sc*/
+    font-size: 48px; /* Tamanho grande */
     text-align: center;
-    
 }
 .gallery-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    text-decoration: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
+    display: inline-block; /*faz com que o link da galeria seja exibido em bloco*/
+    margin-top: 10px; /*faz com que o link da galeria tenha 10px de margem em cima*/
+    padding: 8px 16px; /*faz com que o link da galeria tenha 8px de padding em cima e embaixo e 16px nas laterais*/
+    font-size: 16px;  /*faz com que o texto do link da galeria tenha 16px de tamanho*/
+    background-color: white; /*faz com que o background do link da galeria seja branco*/
+    color: black; /*faz com que o texto do link da galeria seja preto*/
+    border: 1px solid black; /*faz com que o link da galeria tenha uma borda de 1px sólida preta*/
+    text-decoration: none; /*faz com que o link da galeria não tenha decoração*/
+    border-radius: 4px; /*faz com que o link da galeria tenha uma borda arredondada de 4px*/
+    cursor: pointer; /*faz com que o cursor do link da galeria seja um ponteiro*/
+    text-align: center; /*faz com que o texto do link da galeria fique centralizado*/
 }
 
 .gallery-link:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /*faz com que o background do link da galeria seja cinza claro ao passar o mouse*/
+}
+
+footer {
+    background-color: rgb(0, 0, 0); /*faz com que o background do footer seja preto*/
+    color: white; /*faz com que o texto do footer seja branco*/
+    text-align: center; /*faz com que o texto do footer fique centralizado*/
+    padding: 10px; /*faz com que o padding do footer seja 10px*/
+    margin-top: 0px; /*faz com que o footer tenha 0px de margem em cima*/
+}
+
+footer img {
+    height: 6rem; /*faz com que a imagem do footer tenha 6rem de altura*/
+    margin: 0; /*faz com que a margem da imagem do footer seja 0*/
+    padding: 0; /*faz com que o padding da imagem do footer seja 0*/
+}
+
+footer p{
+    margin: 0; /*faz com que o texto do footer tenha 0px de margem*/
+    text-align: center; /*faz com que o texto do footer fique centralizado*/
+}
+
+p {
+    color: aliceblue;
+    text-align: justify; 
+    margin-left: 0%;
+    margin-right: 50%;
+    /* VAI TRABALHAR*/
+}
+.imagens {
+    margin-left: 60rem;
+   align-items: center;
+   margin-top: -11rem;
+}
+
+.content-container {
+    display: flex; /* Alinha os itens em linha */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: row-reverse; /* Inverte a ordem dos itens */
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    padding: 20px; /* Espaçamento interno */
+    margin-right: 350px;
+}
+
+.responsive-image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.text-content {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Alinha os itens em coluna em telas menores */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .responsive-image {
+        margin-bottom: 20px; /* Espaço abaixo da imagem em telas menores */
+    }
+
+    .text-content {
+        width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+        padding: 0 20px; /* Adiciona espaçamento interno para melhor legibilidade */
+    }
 }
